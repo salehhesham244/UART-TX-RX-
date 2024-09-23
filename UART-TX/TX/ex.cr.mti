@@ -1,0 +1,29 @@
+D:/Courses/K.W/Design-Diploma/Projetcs/UART/UART-TX/TX/FSM.v {1 {vlog -work work -vopt -stats=none {D:\Courses\K.W\Design-Diploma\Projetcs\UART\UART-TX\TX\FSM.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} D:/Courses/K.W/Design-Diploma/Projetcs/UART/UART-TX/TX/TX_Wrapper.sv {1 {vlog -work work -vopt -sv -stats=none D:/Courses/K.W/Design-Diploma/Projetcs/UART/UART-TX/TX/TX_Wrapper.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module TX_Wrapper
+
+Top level modules:
+	TX_Wrapper
+
+} {} {}} D:/Courses/K.W/Design-Diploma/Projetcs/UART/UART-TX/TX/Parity_Calc.v {1 {vlog -work work -vopt -stats=none D:/Courses/K.W/Design-Diploma/Projetcs/UART/UART-TX/TX/Parity_Calc.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Parity_Calc
+
+Top level modules:
+	Parity_Calc
+
+} {} {}} D:/Courses/K.W/Design-Diploma/Projetcs/UART/UART-TX/TX/TB.sv {1 {vlog -work work -vopt -sv -stats=none D:/Courses/K.W/Design-Diploma/Projetcs/UART/UART-TX/TX/TB.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module TB
+
+Top level modules:
+	TB
+
+} {} {}}

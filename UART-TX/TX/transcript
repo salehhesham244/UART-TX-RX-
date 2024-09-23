@@ -1,0 +1,305 @@
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -voptargs="+acc" TB 
+# Start time: 23:35:53 on Aug 28,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+# Loading sv_std.std
+# Loading work.TB(fast)
+# Loading work.TX_Wrapper(fast)
+# Loading work.Serializer(fast)
+# Loading work.Parity_Calc(fast)
+# Loading work.FSM(fast)
+# Loading work.MUX_4x1(fast)
+add wave -position insertpoint  \
+sim:/TB/parity_en
+add wave -position insertpoint  \
+sim:/TB/clk \
+sim:/TB/rst \
+sim:/TB/data_valid \
+sim:/TB/parity_en \
+sim:/TB/parity_type \
+sim:/TB/tx_out \
+sim:/TB/busy \
+sim:/TB/data \
+sim:/TB/i
+add wave -position insertpoint  \
+sim:/TB/DUT/mux/TX_out
+add wave -position insertpoint  \
+sim:/TB/DUT/tx_DUT/mux_sel \
+sim:/TB/DUT/tx_DUT/cs \
+sim:/TB/DUT/tx_DUT/ns
+run -all
+#                    0:rst=0, data_valid=0, Data=0, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                   10:rst=1, data_valid=0, Data=0, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                   25:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=0
+#                   27:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   29:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   35:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   37:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   39:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   41:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   43:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   45:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   47:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=0
+#                   51:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   53:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   57:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   59:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   61:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   63:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   65:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   67:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   69:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   71:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=0
+#                   75:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   77:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   79:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   81:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   83:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   85:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   87:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   89:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   91:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                   93:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                   95:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=0
+#                   99:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  101:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  105:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  107:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  109:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  111:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  113:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  115:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  117:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  119:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=0
+#                  123:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  125:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  127:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  129:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  131:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  133:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  135:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  137:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  139:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  141:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  143:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=0
+#                  147:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=1, busy=1
+#                  149:rst=1, data_valid=1, Data=10101010, Parity_EN=1, Parity_type=1, Tx_out=0, busy=1
+#                  150:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  155:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  157:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  159:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  161:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  163:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  165:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  167:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=0
+#                  169:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=0
+#                  171:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  173:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  177:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  179:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  181:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  183:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  185:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  187:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  189:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  191:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=0
+#                  193:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=0
+#                  195:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  197:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  199:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  201:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  203:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  205:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  207:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  209:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  211:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  213:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  215:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=0
+#                  217:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=0
+#                  219:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  221:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  225:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  227:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  229:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  231:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  233:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  235:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  237:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  239:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=0
+#                  241:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=0
+#                  243:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  245:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  247:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  249:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  251:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  253:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  255:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  257:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  259:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  261:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  263:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=0
+#                  265:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=0
+#                  267:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  269:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  273:rst=1, data_valid=1, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=1
+#                  275:rst=1, data_valid=0, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=1
+#                  287:rst=1, data_valid=0, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=0, busy=0
+#                  289:rst=1, data_valid=0, Data=1010101, Parity_EN=1, Parity_type=0, Tx_out=1, busy=0
+#                  290:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  291:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  293:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  299:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  301:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  303:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  305:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  307:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  309:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  311:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  313:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  315:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  317:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  319:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  321:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  323:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  325:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  327:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  329:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  331:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  333:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  335:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  337:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  339:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  341:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  343:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  345:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  347:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  349:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  351:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  353:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  355:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  357:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  359:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  361:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  363:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  365:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  367:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  369:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  371:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  373:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  375:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  377:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  379:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  381:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  383:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  385:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  387:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  389:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  391:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  393:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  395:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  397:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  399:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  401:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  403:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  405:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  407:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  409:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  411:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  413:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  415:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  417:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  419:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  421:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  423:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  425:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  427:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  429:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  431:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  433:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  435:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  437:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  439:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  441:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  443:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  445:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  447:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  449:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  451:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  453:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  455:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  457:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  459:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  461:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  463:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  465:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  467:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  469:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  471:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  473:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  475:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  477:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  479:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  481:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  483:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  485:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  487:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  489:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  491:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  493:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  495:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  497:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  499:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  501:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  503:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  505:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  507:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  509:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  511:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  513:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  515:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  517:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  519:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  521:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  523:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  525:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  527:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  529:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  531:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  533:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  535:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  537:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  539:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  541:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  543:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  545:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  547:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  549:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  551:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=0
+#                  553:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=0
+#                  555:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  557:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  559:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  561:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  563:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  565:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+#                  567:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=1, busy=1
+#                  569:rst=1, data_valid=1, Data=10101010, Parity_EN=0, Parity_type=0, Tx_out=0, busy=1
+# ** Note: $stop    : TB.sv(49)
+#    Time: 570 ns  Iteration: 0  Instance: /TB
+# Break in Module TB at TB.sv line 49
+# End time: 23:37:56 on Aug 28,2024, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 0
